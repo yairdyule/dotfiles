@@ -8,3 +8,4 @@ source ~/.config/zsh/plugins/fzf.sh
 source ~/.config/zsh/plugins/fzf-fn.sh
 source ~/.config/zsh/plugins/base16.sh
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+source ~/.config/zsh/plugins/llama.sh

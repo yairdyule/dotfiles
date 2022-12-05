@@ -26,5 +26,9 @@ alias grst="git restore --staged"
 # alias tls="tmux ls"
 # alias tk="tmux kill-session -t"
 
+alias brag="nvim ~/Documents/lunchbox/brag.md"
+
 alias showip="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
 alias budget="cd ~/Documents/interesting-repos/budgeting; (cd actual && yarn run start:browser) & (cd actual-server && yarn run start)"
+
+alias n42="ssh jjewell@n42.novadine.com"
