@@ -1,6 +1,7 @@
-
 .config/gh
 .config/zsh/exports.sh
 .config/kitty/bin
 .config/kitty/lib/python3.10/site-packages
 .config/kitty/pyvenv.cfg
+
+.config/lazygit/state.yml
