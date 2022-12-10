@@ -1,0 +1,6 @@
+[submodule ".config/kitty/config/themes/kitty"]
+	path = .config/kitty/config/themes/kitty
+	url = git@github.com:catppuccin/kitty.git
+[submodule ".config/kitty/config/themes/catpuccin"]
+	path = .config/kitty/config/themes/catpuccin
+	url = git@github.com:catppuccin/kitty.git
