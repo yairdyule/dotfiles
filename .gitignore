@@ -5,3 +5,4 @@
 .config/kitty/pyvenv.cfg
 
 .config/lazygit/state.yml
+.config/nvim/plugin/packer_compiled.lua
