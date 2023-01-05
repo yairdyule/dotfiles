@@ -60,6 +60,8 @@ return packer.startup(function(use)
 	-- use({ "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" })
 	use({ "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" })
 
+	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
+
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" })
 	use({ "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" })
@@ -76,6 +78,7 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" })
 	use({ "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" })
+	use("hrsh7th/cmp-nvim-lsp-signature-help")
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }) --snippet engine
@@ -120,6 +123,23 @@ return packer.startup(function(use)
 
 	use("jbyuki/venn.nvim")
 	use({ "kevinhwang91/nvim-hlslens" })
+
+	use({
+		"Pocco81/true-zen.nvim",
+		config = function()
+			require("true-zen").setup({
+				-- your config goes here
+				-- or just leave it empty :)
+			})
+		end,
+	})
+
+	use("neovim/nvim-lspconfig")
+	use("simrat39/rust-tools.nvim")
+
+	-- Debugging
+	use("nvim-lua/plenary.nvim")
+	use("mfussenegger/nvim-dap")
 	-- use({
 	-- 	"folke/noice.nvim",
 	-- 	config = function()
