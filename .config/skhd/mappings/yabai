@@ -1,0 +1,53 @@
+# application hotkeys
+cmd + ctrl - s : open -a /Applications/Spotify.app 
+cmd + ctrl - k : open -a /Applications/kitty.app 
+cmd + ctrl - b : open -a /Applications/Google\ Chrome.app 
+cmd + ctrl - w : open -a /Applications/Slack.app 
+cmd + ctrl - d : open -a /Applications/Discord.app 
+
+# focus window
+cmd + ctrl - e : yabai -m window --focus east
+cmd + ctrl - m : yabai -m window --focus west
+cmd + ctrl - i : yabai -m window --focus north
+cmd + ctrl - o : yabai -m window --focus south
+
+# swap managed window
+cmd + ctrl - 8 : yabai -m window --swap east
+cmd + ctrl - 7 : yabai -m window --swap west
+cmd + ctrl - 9 : yabai -m window --swap north
+cmd + ctrl - 0 : yabai -m window --swap south
+
+# balance size of windows
+cmd + shift + ctrl - 0 : yabai -m space --balance
+
+# make floating window fill screen
+# shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+
+# send window to desktop and follow focus
+# shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
+# shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+
+# focus monitor
+# ctrl + alt - z  : yabai -m display --focus prev
+# ctrl + alt - 3  : yabai -m display --focus 3
+
+# send window to monitor and follow focus
+ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
+# ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+
+# move floating window
+# shift + ctrl - a : yabai -m window --move rel:-20:0
+# shift + ctrl - s : yabai -m window --move rel:0:20
+
+# increase window size
+shift + ctrl + cmd - a : yabai -m window --resize left:-20:0
+shift + ctrl + cmd - w : yabai -m window --resize left:20:0
+
+# float / unfloat window and center on screen
+ctrl - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+# alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
+
+ctrl + shift + cmd - 7 : yabai -m space --create && \
+                  index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+                  yabai -m window --space "${index}" && \
+                  yabai -m space --focus "${index}"# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
