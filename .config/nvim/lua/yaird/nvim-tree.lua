@@ -61,7 +61,7 @@ nvim_tree.setup({
 		number = true,
 		relativenumber = true,
 		signcolumn = "yes",
-		width = 40,
+		width = 60,
 		side = "right",
 		mappings = {
 			list = {

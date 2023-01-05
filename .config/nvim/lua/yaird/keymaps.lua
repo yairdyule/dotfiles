@@ -79,11 +79,14 @@ keymap(modes.normal, "<leader>fw", ":Telescope live_grep<CR>", opts)
 keymap(modes.normal, "<leader>fp", ":Telescope projects<CR>", opts)
 keymap(modes.normal, "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap(modes.normal, "<leader>fd", ":Telescope diagnostics<CR>", opts)
+keymap(modes.normal, "<leader>fr", ":Telescope lsp_references<CR>", opts)
 
 -- Git
 keymap(modes.normal, "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap(modes.normal, "<leader>dv", "<cmd>DiffviewOpen<CR>", opts)
 keymap(modes.normal, "<leader>dc", "<cmd>DiffviewClose<CR>", opts)
+keymap(modes.normal, "<leader>gn", "<cmd>Gitsigns next_hunk<CR><CR>", { silent = true })
+keymap(modes.normal, "<leader>gp", "<cmd>Gitsigns prev_hunk<CR><CR>", { silent = true })
 
 -- Comment
 keymap(modes.normal, "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
@@ -99,6 +102,8 @@ keymap(modes.normal, "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", op
 keymap(modes.normal, "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap(modes.normal, "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap(modes.normal, "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+keymap(modes.normal, "<leader>tz", "<cmd>TZAtaraxis<cr>", opts)
 
 vim.cmd([[
 nnoremap <leader> wg :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

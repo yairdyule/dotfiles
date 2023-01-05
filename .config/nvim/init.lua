@@ -22,6 +22,7 @@ local modules = {
 	"impatient",
 	"illuminate",
 	-- "indentline",
+	"quickfix",
 	"alpha",
 	"lsp",
 	"dap",
